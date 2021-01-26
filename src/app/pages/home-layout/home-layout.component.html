@@ -1,0 +1,40 @@
+<div class="example-container" style="height: 90%;">
+   <mat-toolbar  class="toolbar">
+    <button
+      mat-icon-button
+      color="light"
+      aria-label="Menu icon"
+      (click)="drawer.toggle()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+     <span><h1 class="roboto--wt300 ls_h1--primary">Hello</h1></span><span class="roboto--wtbold ls_h1--primary">&nbsp;<b>there !</b></span>
+   
+  </mat-toolbar> 
+  <mat-drawer-container style="height: 100%;background-color: white;" hasBackdrop="true">
+    <mat-drawer #drawer mode="over" >
+      <mat-nav-list>
+        <a mat-list-item routerLink="." *ngFor="let page of side_pages;let i=index" (click)="navigate(i);sidemenu.toggle();">{{
+          page.name
+        }}</a>
+      </mat-nav-list>
+
+    </mat-drawer>
+    <mat-drawer-content>
+  <section class="full-width search_bar" >
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput placeholder="Search Food" class=" search_bar--input" style="margin-left: 12px;" autocomplete="off">
+      <span matSuffix class="pointer filter">
+        <mat-icon >settings_input_component</mat-icon>
+      </span> 
+    </mat-form-field>
+  </section>
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+  </mat-drawer-content>
+</mat-drawer-container>
+</div>
+
+  

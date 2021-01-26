@@ -1,0 +1,35 @@
+
+.roboto{
+    font-family: 'Roboto Condensed', sans-serif;   
+    &--wt300{
+        font-weight: 300;  
+    }
+    &--wtbold{
+        font-weight: bolder;  
+    }
+
+}
+.nerko{
+    font-family: 'Nerko One', cursive;   
+    &--wt300{
+        font-weight: 300;  
+    }
+    &--wtbold{
+        font-weight: bolder;  
+    }
+
+}
+.font{
+    &-xlarge{
+        
+    font-size: x-large;
+    }
+}
+.ls{
+    &_h1{
+        &--primary{
+            
+        letter-spacing: 0.1rem;
+        }
+    }   
+}

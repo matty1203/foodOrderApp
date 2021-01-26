@@ -1,0 +1,30 @@
+<section class="section">
+  <header class="section--heading nerko--wtbold font-xlarge">
+      <span class="section--textbox">Combo Deals</span>
+      <div class="row">
+        <div class="column" *ngFor="let banner of banners">
+            <div  class="column__img" [ngStyle]="{'background-image': 'url(' + banner.url + ')'}">
+                 <h2>{{banner?.name}}</h2>
+          <p>Some text..</p>
+            </div>
+         
+        </div>
+        
+      </div>
+  </header>
+</section>
+<section class="section">
+    <header class="section--heading nerko--wtbold font-xlarge">
+        <span class="section--textbox">Our Menu</span>
+    </header>
+    <div class="food_list" *ngFor="let food of foods">
+        <div class="food_list--img">
+        <div class="img-box"> 
+             
+        </div>
+        </div>
+        <div class="food_list--info">
+sdsd
+        </div>
+      </div>
+  </section>

@@ -1,0 +1,56 @@
+@import "../../app.component.scss";
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+  }
+.main{
+    padding: 2vh;
+    background-color: $color-white-light;
+     
+    &__inner-border{
+        position: relative;
+        background-image: linear-gradient(to right, $color-primary ,$color-primary-light);
+        // background-color:$color-primary ;
+        // border: 12px solid $color-primary;
+        border-radius: 12px;
+        height: 96vh;
+        display: flex;
+        &--h1{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            margin-top: 3rem;
+            font-family: 'Yellowtail', cursive;
+            font-size: 2.5rem;
+            color: white;
+        }
+   
+    }
+}
+.centre-box{
+    margin:auto;
+    color:$color-white-light;
+    &--h1{
+        font-family: 'Fredoka One', cursive;
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 20%;
+        transform: translateX(-2rem);
+        animation: rightleft 2s ease-out 1s;
+        animation-fill-mode: backwards;
+    }
+}
+.btn{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    animation: leftright 2s ease-out 1s;
+    animation-fill-mode: backwards;
+    &:hover{
+        background-color:  $color-primary;
+        color: white;
+        border: 1px solid white;
+        transition: background-color 1s;
+    }
+}

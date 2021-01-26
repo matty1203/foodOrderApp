@@ -1,0 +1,85 @@
+@import "../../app.component.scss";
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+  }
+
+.section{
+    margin-left: 3%;
+    margin-right: 3%;
+    &--heading{
+        margin-top: 1%;
+    }
+    &--textbox{
+        border-bottom: 4px solid $heading-underline ;
+    }
+}
+.row{
+    display: flex;
+    margin-top: 3%;
+    width: 100%!important;
+    overflow-x:auto ;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+    &::-webkit-scrollbar {
+        display: none;
+      }
+}
+.column{
+    margin-right: 2%;
+    min-width:20vw;
+    max-width:20vw;
+    height: 32vh;
+    box-sizing: border-box;
+    
+    // border:1px solid black;
+    border-radius: 2rem;
+}
+.column__img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    border-radius: 2rem;
+}
+.food_list{
+    width: 100%;
+    margin-top: 2%;
+    border-bottom: 1px solid $color-light-grey;
+    padding: 2%;
+&:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.food_list--img{
+    float: left;
+    width: 20%;
+}
+.food_list--info{
+    float: left;
+    width: 80%;
+}
+@media only screen and (max-width: 1024px) {
+
+.row{
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+.column{
+    min-width:40vw;
+    max-width: 40vw;
+    height: 35vh;
+}
+.food_list{
+    padding: 4%;
+    margin-top: 8%;
+}
+.food_list--img{
+    width: 30%;
+}
+.food_list--info{
+    width: 70%;
+}
+}
