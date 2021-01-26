@@ -1,9 +1,42 @@
-.right-aligned{
-    text-align: right;
+.right-aligned {
+  text-align: right;
 }
-.full-width{
-    width: 100%;
+
+.full-width {
+  width: 100%;
 }
-.pointer{
-    cursor: pointer;
+
+.pointer {
+  cursor: pointer;
+}
+
+.block {
+  display: block;
+}
+
+.margin {
+  &_top {
+    &--1rem {
+      margin-top: 1rem;
+    }
+
+    &--auto {
+      margin-top: auto;
+    }
+  }
+
+  &_btm {
+    &--1rem {
+      margin-bottom: 1rem;
+    }
+
+    &--auto {
+      margin-bottom: auto;
+    }
+  }
+
+  &_auto {
+    margin: auto
+  }
+
 }
