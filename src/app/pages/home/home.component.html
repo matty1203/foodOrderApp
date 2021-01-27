@@ -24,9 +24,15 @@
       </div>
     </div>
     <div class="food_list--info">
-      <span class="block roboto--wt300">
-        X 1
-      </span>
+      <div style="display: flex;" class="full-width">
+        <div class="block roboto--wt300 full-width">
+          X 1
+        </div>
+        <div class=" full-width right-aligned">
+          <button mat-button class="add-btn">+ Add</button>
+        </div>
+      </div>
+
       <div style="display: flex;" class="full-width margin_top--1rem margin_btm--1rem font-large ">
         <div class="font-large  nerko--wtbold full-width"> {{food?.name}} </div>
         <div class="right-aligned roboto--wtbold full-width">&#8377;{{food?.price}}</div>

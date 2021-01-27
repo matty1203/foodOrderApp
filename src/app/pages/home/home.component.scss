@@ -4,6 +4,16 @@
     margin: 0%;
     box-sizing: border-box;
   }
+  .add-btn{
+      border: 1px solid $color-primary;
+      color: $color-primary;
+      border-radius: 2rem;
+      z-index: 0;
+      &:hover{
+          background-color: $color-primary;
+          color: white;
+      }
+  }
 
 .section{
     margin-left: 3%;
