@@ -15,13 +15,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatChipsModule} from '@angular/material/chips';
 import { MatListModule } from "@angular/material/list";
+import { TestCompComponent } from './pages/test-comp/test-comp.component';
+import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
 
 @NgModule({
   declarations: [
     AppComponent,
     SuperHomeComponent,
     HomeComponent,
-    HomeLayoutComponent
+    HomeLayoutComponent,
+    TestCompComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { MatListModule } from "@angular/material/list";
     MatFormFieldModule,
     MatInputModule,
     MatToolbarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxScannerQrcodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

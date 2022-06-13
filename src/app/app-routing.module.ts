@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeLayoutComponent } from './pages/home-layout/home-layout.component';
 import { SuperHomeComponent } from './pages/super-home/super-home.component';
+import { TestCompComponent } from './pages/test-comp/test-comp.component';
 
 const routes: Routes = [{
   path:'',
@@ -11,6 +12,10 @@ const routes: Routes = [{
 {
   path:"scan-home",
   component:SuperHomeComponent
+},
+{
+  path:"test",
+  component:TestCompComponent
 },
 {
   path:"home",

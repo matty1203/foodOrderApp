@@ -24,5 +24,9 @@ export class HomeLayoutComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  printScreen(){
+    console.log("Im enetered")
+    window.print();
+  }
 
 }
