@@ -7,19 +7,14 @@ import QRScanner from 'qr-code-scanner';
   styleUrls: ['./super-home.component.scss']
 })
 export class SuperHomeComponent implements OnInit {
-
+  public output: string;
   constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
-scan(){
- console.log(navigator.mediaDevices,"NEw") 
-//   QRScanner.initiate({
-//     // match: /^[a-zA-Z0-9]{16,18}$/, // optional
-//     onResult: function (result) { console.info('DONE: ', result); },
-//     onError: function (err) { console.error('ERR :::: ', err); }, // optional
-//     onTimeout: function () { console.warn('TIMEOUT'); } // optional
-// })
-this.router.navigate(['/home'])
-}
+
+
+  public onError(e): void {
+    alert(e);
+  }
 }

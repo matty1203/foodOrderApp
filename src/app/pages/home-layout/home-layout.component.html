@@ -8,7 +8,12 @@
     >
       <mat-icon>menu</mat-icon>
     </button>
-     <span><h1 class="roboto--wt300 ls_h1--primary">Hello</h1></span><span class="roboto--wtbold ls_h1--primary">&nbsp;<b>there !</b></span>
+    <div class="toolbar-companyName">
+      Restaurent name!
+    </div>
+    <div class="toolbar-search">
+      <mat-icon class="toolbar-search_icon">search</mat-icon>
+    </div>
    
   </mat-toolbar> 
   <mat-drawer-container style="height: 100%;background-color: white;" hasBackdrop="true">
@@ -21,7 +26,7 @@
 
     </mat-drawer>
     <mat-drawer-content>
-  <section class="full-width search_bar" >
+  <!-- <section class="full-width search_bar" >
     <mat-form-field appearance="outline" class="full-width">
       <mat-icon matPrefix>search</mat-icon>
       <input matInput placeholder="Search Food" class=" search_bar--input" style="margin-left: 12px;" autocomplete="off">
@@ -29,13 +34,13 @@
         <mat-icon >settings_input_component</mat-icon>
       </span> 
     </mat-form-field>
-  </section>
+  </section> -->
   <main class="content">
     <router-outlet></router-outlet>
   </main>
   </mat-drawer-content>
 </mat-drawer-container>
 </div>
-<button class="print_btn" (click)="printScreen()">
+<!-- <button class="print_btn" (click)="printScreen()">
 Print
-</button>
+</button> -->

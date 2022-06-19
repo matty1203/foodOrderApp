@@ -5,52 +5,87 @@
     box-sizing: border-box;
   }
 .main{
-    padding: 2vh;
-    background-color: $color-white-light;
-     
-    &__inner-border{
-        position: relative;
-        background-image: linear-gradient(to right, $color-primary ,$color-primary-light);
-        // background-color:$color-primary ;
-        // border: 12px solid $color-primary;
-        border-radius: 12px;
-        height: 96vh;
-        display: flex;
-        &--h1{
-            position: absolute;
-            width: 100%;
-            text-align: center;
-            margin-top: 3rem;
-            font-family: 'Yellowtail', cursive;
-            font-size: 2.5rem;
-            color: white;
+  &--landing_page{
+    background-color: $primary-body-color;
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+}
+.qr_code_scanner{
+    &--content{
+        width: 50vw;
+        height: 60vh;
+        max-height: 70vh;
+        max-width: 65vw;
+        background-color: $secondary-bodoy-color;
+        border-radius: 1.5rem;
+        box-shadow:1px 2px 9px 3px #ebebeb;
+        padding-top: 2.5rem;
+        &-logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25%;
+            img{
+                height: 80%;
+                width: 12%;
+            }
         }
+        &-heading{
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+    &--device{
+        display: flex;
+        justify-content: center;
+        &-scanarea{
+            height: 30vh;
+            width: 50%; 
+            max-height: 35vh;
+            max-width: 50%;
+        }
+    }
    
-    }
+    
 }
-.centre-box{
-    margin:auto;
-    color:$color-white-light;
-    &--h1{
-        font-family: 'Fredoka One', cursive;
-        font-size: 2rem;
-        font-weight: bold;
-        letter-spacing: 2px;
-        margin-bottom: 20%;
-        transform: translateX(-2rem);
-        animation: rightleft 2s ease-out 1s;
-        animation-fill-mode: backwards;
-    }
+.no_attached-btn{
+    position: absolute;
+    bottom: 2rem;
+    left: auto;
+    right: auto;
 }
-.btn{
-    padding-top: 24px;
-    padding-bottom: 24px;
-    animation: leftright 2s ease-out 1s;
-    animation-fill-mode: backwards;
-    &:hover{
-        background-color:  $color-primary;
-        color: white;
-        border: 1px solid white;
-        transition: background-color 1s;
+@media only screen and (max-width: 768px) {
+    .qr_code_scanner{
+        &--content{
+            width: 95vw;
+            height: 80vh;
+            max-height: 80vh;
+            max-width: 100vw;
+            padding-top: 2rem; 
+            &-logo{
+                height: 25%;
+                img{
+                    height: 80%;
+                    width: 30%;
+                }
+            }
+        }
+        &--device{
+            display: flex;
+            justify-content: center;
+            &-scanarea{
+                height: 30vh;
+                width: 50%; 
+                max-height: 35vh;
+                max-width: 50%;
+            }
+        }
+        
     }
-}
+  }

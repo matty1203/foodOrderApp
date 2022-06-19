@@ -1,8 +1,5 @@
-<div class="main">
+<!-- <div class="main">
   <div class="main__inner-border">
-    <!-- <div class="main__inner-border--h1">
-Restaurent Name
-      </div> -->
     <div class="centre-box">
       <div>
         <p class="centre-box--h1">Hi, there</p>
@@ -19,4 +16,22 @@ Restaurent Name
 
     </div>
   </div>
+</div> -->
+
+<div class="main--landing_page">
+    <div class="qr_code_scanner--content">
+        <div class="qr_code_scanner--device">
+          <div class="qr_code_scanner--device-scanarea">
+            <ngx-scanner-qrcode #action="scanner" (data)="output = $event"></ngx-scanner-qrcode>
+          </div>
+        </div>
+        <div class="qr_code_scanner--content-logo">
+            <img src="../../../assets/images/food-pin.png" height="100%" width="100%">
+        </div>
+        <div class="qr_code_scanner--content-heading roboto">
+          Get your menu right away on your phone.
+          <p>{{output}}</p>
+      </div>
+    </div>
+    <button class="no_attached-btn primary-btn" mat-button (click)="action.toggleCamera()" [disabled]="action.isLoading">{{action.isStart ? 'Stop' : 'Start'}} Scan QR Code</button>
 </div>

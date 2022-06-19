@@ -9,6 +9,14 @@
 .toolbar{
     background-color: $color-secondary;
     color: $primary-text-color;
+    justify-content: space-between;
+    &-companyName{
+      font-weight: 500;
+    }
+    &-search{
+      cursor: pointer;
+   
+    }
 }
 .search_bar{
   // margin-top: 2%;
@@ -29,7 +37,7 @@
   
   }
   .content{
-    padding-top: 5rem;}
+    padding-top: 2rem;}
 // ::ng-deep .mat-form-field-outline {
 //     background-color: antiquewhite !important;
 //     border-radius: 2rem !important;

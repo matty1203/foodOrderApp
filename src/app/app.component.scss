@@ -2,3 +2,19 @@
 @import "view-settings/_animations";
 @import "view-settings/_text-class";
 @import "view-settings/_utils";
+
+
+.primary-btn{
+    background-color: $primary-btn-color;
+    color: $primary-btn-text-color;
+    padding: 0.6rem;
+    min-width: 10rem;
+    border-radius: 2rem;
+    transition: all 0.5s;
+    &:hover{
+        color: $primary-btn-color;
+        background-color: $primary-btn-text-color;  
+        border: 1px solid $territory-btn-color;
+        transform: translateY(4px);
+    }
+}
