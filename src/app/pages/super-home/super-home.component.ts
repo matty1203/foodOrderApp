@@ -17,4 +17,7 @@ export class SuperHomeComponent implements OnInit {
   public onError(e): void {
     alert(e);
   }
+  navigate(){
+    this.router.navigate(['/home'])
+  }
 }

@@ -33,5 +33,6 @@
           <p>{{output}}</p>
       </div>
     </div>
-    <button class="no_attached-btn primary-btn" mat-button (click)="action.toggleCamera()" [disabled]="action.isLoading">{{action.isStart ? 'Stop' : 'Start'}} Scan QR Code</button>
-</div>
+    <!-- <button class="no_attached-btn primary-btn" mat-button (click)="action.toggleCamera()" [disabled]="action.isLoading">{{action.isStart ? 'Stop' : 'Start'}} Scan QR Code</button> -->
+    <button class="no_attached-btn primary-btn" (click)="navigate()">Scan Me</button>
+  </div>
