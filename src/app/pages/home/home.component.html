@@ -1,4 +1,4 @@
-<section class="section">
+<!-- <section class="section">
   <header class="section--heading nerko--wtbold font-xlarge">
     <span class="section--textbox">Hits of the Week</span>
     <div class="row">
@@ -40,4 +40,24 @@
 
     </div>
   </div>
+</section> -->
+
+<section class="main-content">
+  <section class="banner_section">
+    <h1 class="banner_section--heading">Hits of the Week</h1>
+    <div class="banner_carousel" (swipeleft)="onBannerSwipeLeft($event)">
+      <div class="banner_carousel--item">
+        <section class="banner_carousel--img">
+          <img [src]="banners[theActiveBannerIndex].url">
+        </section>
+        <section class="banner_carousel--content">
+          <div class="banner_carousel--content-title">{{banners[theActiveBannerIndex]?.name}}</div>
+          <div class="banner_carousel--content-pricebtn"><button mat-button class="roboto">$ 22.40</button></div>
+        </section>
+      </div>
+    </div>
+    <section class="banner_section--tracker">
+      <div *ngFor="let banner of banners" class="banner_section--tracker-item"></div>
+    </section>
+  </section>
 </section>

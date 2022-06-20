@@ -1,5 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerGestureConfig, HammerModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import * as Hammer from 'hammerjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,11 @@ import {MatChipsModule} from '@angular/material/chips';
 import { MatListModule } from "@angular/material/list";
 import { TestCompComponent } from './pages/test-comp/test-comp.component';
 import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
-
+export class HammerConfig extends HammerGestureConfig {
+  overrides = {
+    swipe: { direction: Hammer.DIRECTION_ALL },
+  };
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +33,7 @@ import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatIconModule,
     AppRoutingModule,
     MatListModule,
@@ -36,11 +42,12 @@ import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
     MatSidenavModule,
     MatFormFieldModule,
     MatInputModule,
+    HammerModule,
     MatToolbarModule,
-    BrowserAnimationsModule,
     NgxScannerQrcodeModule
   ],
-  providers: [],
+  providers: [{provide: HAMMER_GESTURE_CONFIG,
+    useClass: HammerConfig}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
