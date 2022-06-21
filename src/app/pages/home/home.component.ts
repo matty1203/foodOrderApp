@@ -34,8 +34,11 @@ export class HomeComponent implements OnInit {
 
   onBannerSwipeLeft(e) {
     let curr_banner_elem = document.getElementsByClassName("banner-active");
+    if(curr_banner_elem[0]!=undefined){
     let next_banner_index = Number(curr_banner_elem[0].id.replace(/\D/g, "")) + 1;
     let curr_byID=document.getElementById(curr_banner_elem[0].id);
+
+    ////Won't go overboard
     if (next_banner_index < this.banners.length) {
       let next_banner_elem=document.getElementById("banner-"+next_banner_index)
       document.getElementById(curr_banner_elem[0].id+'-tracker').classList.remove('active_tracker');
@@ -47,10 +50,12 @@ export class HomeComponent implements OnInit {
       next_banner_elem.style.cssText += 'right:0%';
       document.getElementById("banner-"+next_banner_index+'-tracker').classList.add('active_tracker');
     }
-   
+   }////End If there is an active Banner available
   }
   onBannerSwipeRight(e) {
     let curr_banner_elem = document.getElementsByClassName("banner-active");
+    console.log()
+    if(curr_banner_elem[0]!=undefined){
     let next_banner_index = Number(curr_banner_elem[0].id.replace(/\D/g, "")) - 1;
     let curr_byID=document.getElementById(curr_banner_elem[0].id);
     if (next_banner_index >= 0) {
@@ -60,11 +65,12 @@ export class HomeComponent implements OnInit {
       curr_byID.classList.remove("banner-active");
       curr_byID.style.cssText += 'right:-105%';
       setTimeout(function(){next_banner_elem.classList.remove("banner-inactive");
-      next_banner_elem.classList.add("banner-active");},1000)
+      next_banner_elem.classList.add("banner-active");},500)
       next_banner_elem.style.cssText += 'right:0%';
       document.getElementById("banner-"+next_banner_index+'-tracker').classList.add('active_tracker');
     }
     // this.swipeCard(-1)
+  }///End if there is an active banner available
   }
 
   initializeBanner() {
