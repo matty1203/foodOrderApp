@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~10.0.14",
     "@angular/platform-browser-dynamic": "~10.0.14",
     "@angular/router": "~10.0.14",
+    "hammerjs": "^2.0.8",
     "ngx-scanner-qrcode": "^1.0.17",
     "qr-code-scanner": "^1.0.8",
     "rxjs": "~6.5.5",

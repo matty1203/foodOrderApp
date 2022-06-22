@@ -1,4 +1,4 @@
-<section class="section">
+<!-- <section class="section">
   <header class="section--heading nerko--wtbold font-xlarge">
     <span class="section--textbox">Hits of the Week</span>
     <div class="row">
@@ -40,4 +40,33 @@
 
     </div>
   </div>
+</section> -->
+
+<section class="main-content">
+  <section class="banner_section">
+    <h1 class="banner_section--heading">Hits of the Week</h1>
+    <div class="banner_carousel" (swipeleft)="onBannerSwipeLeft($event)" (swiperight)="onBannerSwipeRight($event)">
+      <!-- <div class="banner_carousel--item banner-active" >
+        <section class="banner_carousel--img">
+          <img [src]="banners[0].url">
+        </section>
+        <section class="banner_carousel--content">
+          <div class="banner_carousel--content-title">{{banners[0]?.name}}</div>
+          <div class="banner_carousel--content-pricebtn"><button mat-button class="roboto">$ 22.40</button></div>
+        </section>
+      </div> -->
+      <div class="banner_carousel--item banner-inactive" *ngFor="let banner of banners;let i = index" id="{{'banner-'+i}}" [data-image-index]="i">
+        <section class="banner_carousel--img" >
+          <img [src]="banner.url">
+        </section>
+        <section class="banner_carousel--content">
+          <div class="banner_carousel--content-title">{{banner?.name}}</div>
+          <div class="banner_carousel--content-pricebtn"><button mat-button class="roboto">$ 22.40</button></div>
+        </section>
+      </div>
+    </div>
+    <section class="banner_section--tracker">
+      <div *ngFor="let banner of banners;let slide_tracker=index;" id="{{'banner-'+slide_tracker+'-tracker'}}" class="banner_section--tracker-item"></div>
+    </section>
+  </section>
 </section>
