@@ -9,6 +9,8 @@
 .toolbar{
     background-color: $color-secondary;
     color: $primary-text-color;
+    position: fixed;
+    z-index: 999;
     justify-content: space-between;
     &-companyName{
       font-weight: 500;
@@ -37,11 +39,7 @@
   
   }
   .content{
-    padding-top: 2rem;}
-// ::ng-deep .mat-form-field-outline {
-//     background-color: antiquewhite !important;
-//     border-radius: 2rem !important;
-//   }
+    padding-top: 3.2rem;}
 
 .print_btn{
 
