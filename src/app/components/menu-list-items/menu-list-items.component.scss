@@ -1,0 +1,39 @@
+.menu_list {
+  &--item {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.486);
+    padding-top: 1rem;
+    display: flex;
+    // flex-wrap: wrap;
+
+    h1 {
+      font-size: 1rem;
+      font-weight: bolder;
+    }
+  }
+
+  &--image {
+    width: 25%;
+    padding: 0.5rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+      border: 1px solid rgb(206, 206, 206);
+      border-radius: 3rem;
+    }
+  }
+
+  &--content {
+    width: 75%;
+    padding: 1rem;
+  }
+  &--addBtn{
+    background: black;
+    text-decoration: none;
+    color: white;
+    border-color: transparent;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    min-width: 90px;
+  }
+}

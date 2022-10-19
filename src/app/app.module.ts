@@ -18,6 +18,8 @@ import {MatChipsModule} from '@angular/material/chips';
 import { MatListModule } from "@angular/material/list";
 import { TestCompComponent } from './pages/test-comp/test-comp.component';
 import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
+import { DashboardMenuItemsComponent } from './components/dashboard-menu-items/dashboard-menu-items.component';
+import { MenuListItemsComponent } from './components/menu-list-items/menu-list-items.component';
 export class HammerConfig extends HammerGestureConfig {
   overrides = {
     swipe: { direction: Hammer.DIRECTION_ALL },
@@ -29,7 +31,9 @@ export class HammerConfig extends HammerGestureConfig {
     SuperHomeComponent,
     HomeComponent,
     HomeLayoutComponent,
-    TestCompComponent
+    TestCompComponent,
+    DashboardMenuItemsComponent,
+    MenuListItemsComponent
   ],
   imports: [
     BrowserModule,
